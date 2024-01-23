@@ -1,24 +1,17 @@
+// App.jsx
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import HomePage from './components/HomePage';
-import RecipeDetail from './components/RecipeDetailPage';
-import RecipeForm from './components/RecipeForm';
-import DeletedRecipesPage from './components/DeletedRecipesPage';
-import recipesData from './data/recipesData';  // Import recipesData
+import RecipeBox from './components/RecipeBox';  // Assuming you have a RecipeBox component
+import recipesData from './data/recipesData';
 
-const App = () => {
-  return (
-    <Router>
-      <Switch>
-        <Route path="/" exact>
-          <HomePage recipes={recipesData} />
-        </Route>
-        <Route path="/recipe/:id" component={RecipeDetail} />
-        <Route path="/create" component={RecipeForm} />
-        <Route path="/deleted" component={DeletedRecipesPage} />
-      </Switch>
-    </Router>
-  );
-};
+const App = () => (
+  <div className="container mx-auto my-8">
+    <h1 className="text-4xl font-bold mb-8 text-indigo-600">Recipe App</h1>
+    <div className="grid grid-cols-3 gap-8">
+      {recipesData.map((recipe, index) => (
+        <RecipeBox key={index} recipe={recipe} />
+      ))}
+    </div>
+  </div>
+);
 
 export default App;
