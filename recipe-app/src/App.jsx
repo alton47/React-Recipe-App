@@ -4,12 +4,15 @@ import HomePage from './components/HomePage';
 import RecipeDetail from './components/RecipeDetail';
 import RecipeForm from './components/RecipeForm';
 import DeletedRecipesPage from './components/DeletedRecipesPage';
+import recipesData from './data/recipesData';  // Import recipesData
 
 const App = () => {
   return (
     <Router>
       <Switch>
-        <Route path="/" exact component={HomePage} />
+        <Route path="/" exact>
+          <HomePage recipes={recipesData} />
+        </Route>
         <Route path="/recipe/:id" component={RecipeDetail} />
         <Route path="/create" component={RecipeForm} />
         <Route path="/deleted" component={DeletedRecipesPage} />
