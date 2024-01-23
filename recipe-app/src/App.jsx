@@ -1,6 +1,6 @@
 // App.jsx
 import React from 'react';
-import RecipeBox from './components/RecipeBox';  // Assuming you have a RecipeBox component
+import RecipeBox from './components/RecipeBox';
 import recipesData from './data/recipesData';
 
 const App = () => (
