@@ -70,3 +70,34 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+/* Global styling goes here */
+
+/* Additional styling goes here */
+
+.container {
+  padding: 1rem;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.25rem;
+}
+
+.btn-blue {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+
+.btn-red {
+  background-color: #ef4444;
+  color: #ffffff;
+}
+
+.btn-gray {
+  background-color: #6b7280;
+  color: #ffffff;
+}
+
+/* You can customize these colors based on your preference */
