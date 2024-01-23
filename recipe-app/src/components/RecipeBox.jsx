@@ -15,8 +15,8 @@ const RecipeBox = ({ recipe, onDelete }) => (
       </button>
     </div>
     <div className="mt-4">
-      <p className="text-gray-600">Calories: Kcal</p>
-      <p className="text-gray-600">Time: mins</p>
+      <p className="text-gray-600">Calories: {recipe.calories} Kcal</p>
+      <p className="text-gray-600">Time: {recipe.time} mins</p>
     </div>
   </div>
 );
